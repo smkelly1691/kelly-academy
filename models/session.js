@@ -25,14 +25,14 @@ const activitySchema= new Schema ( {
         ref: 'User', 
         required: true 
     },
-    location: {
-        type: String, 
-        enum: ['Main Campus', 'Other']
-    }, 
     date: {
         type: Date, 
         required: true,
         default: Date.now
+    }, 
+    location: {
+        type: String, 
+        enum: ['Main Campus', 'Other']
     }, 
     activities: [activitySchema],
     food: [{type: Schema.Types.ObjectId, ref: 'Meal'}],

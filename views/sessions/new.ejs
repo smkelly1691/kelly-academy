@@ -1,9 +1,16 @@
 <%- include('../partials/header') %>
 
 
-
-
-
+<form id="new-form" action="/sessions" method="POST">
+    <label>Date:</label>
+    <input type="datetime-local" name="date">
+    <label>Location:</label>
+    <select name="location">
+      <option value="Main Campus">Main Campus</option>
+      <option value="Other">Other</option>
+    </select>
+    <input type="submit" value="Add Session">
+  </form>
 
 
 <%- include('../partials/footer') %>

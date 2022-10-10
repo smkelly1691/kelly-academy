@@ -1,4 +1,22 @@
 <%- include('../partials/header') %>
 
+<table id="list">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Location</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% sessions.forEach(function(s) { %>
+        <tr>
+          <td><%= s.date %></td>
+          <td><%= s.location %></td>
+          <td><a href="/movies/<%= s._id %>">DETAILS</a></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
   
 <%- include('../partials/footer') %>
