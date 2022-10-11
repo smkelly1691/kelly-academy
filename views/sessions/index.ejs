@@ -11,9 +11,9 @@
     <tbody>
       <% sessions.forEach(function(sesh) { %>
         <tr>
-          <td><%= sesh.date %></td>
+          <td><%= sesh.date.toLocaleDateString() %></td>
           <td><%= sesh.location %></td>
-          <td><a href="/sessions/<%= sesh._id %>">DETAILS</a></td>
+          <td><a href="/sessions/<%= sesh._id %>">Read More</a></td>
         </tr>
         <% }); %>
       </tbody>
