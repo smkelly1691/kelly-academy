@@ -20,9 +20,9 @@ function show(req, res) {
     .populate('food').exec(function(err, session) {
       console.log(session)
       Meal.find(
-        {_id: {$nin: meal.food}},
+        {_id: {$nin: session.food}},
         function(err, meals) {
-          res.render('session/show', { title: 'Session Details', session, meals });
+          res.render('sessions/show', { title: 'Session Details', session, meals });
         }
       )
   });
@@ -45,7 +45,11 @@ function create(req, res) {
     const session = new Session(req.body);
     session.save(function(err) {
         // error handling
-        if (err) return res.redirect('/sessions/new');
-        res.redirect(`/sessions/${session._id}`);
+        if (err) {
+          console.log(err)
+          return res.redirect('/sessions/new');
+        }
+        
+        res.redirect('/sessions');
     });
 }

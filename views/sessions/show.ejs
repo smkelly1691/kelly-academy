@@ -1,9 +1,76 @@
 <%- include('../partials/header') %>
 
-
-
-
-
+<section id="show-page">
+    <div>Date: </div>
+    <div><%= session.date %></div>
+    <div>Location: </div>
+    <div><%= session.location %></div>
+    <div>Food: </div>
+    <ul>
+      <%- session.food.map(m => `<li>${m.name} <small>${m.category}</small><small>${m.description}</small></li>`).join('') %>
+    </ul>    
+  </section>
+  <!-- form to add meals below -->
+  <form id="add-meal-to-food" action="/sessions/<%= session._id %>/meals" method="POST">
+    <select name="mealId">
+      <%- meals.map(m => `<option value="${m._id}">${m.name}</option>`) .join('') %>
+    </select>
+    <button type="submit">Add to Food</button>
+  </form>
+  
+  
+  <br><br>
+  <h2>Activities</h2>
+  
+  <% if(user) { %>
+    <form id="add-activity-form" method="POST" action="/sessions/<%= session._id %>/activities">
+      <label>Activity:</label>
+      <textarea name="title"></textarea>
+      <label>Description:</label>
+      <textarea name="description"></textarea>
+      <input type="submit" value="Add Activity">
+    </form>
+  <% } %>
+  
+  <% if (session.activities.length) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Teacher</th>
+          <th>Date</th>
+          <th>Activity</th>
+          <th>Description</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% let total = 0 %>
+        <% session.activities.forEach(function(a) { %>
+          <% total += a.activity %>
+          <tr>
+            <td class="activity-user"><img alt="avatar" src="<%= a.userAvatar %>" referrerpolicy="no-referrer" ><%= a.userName %></td>
+            <td><%= a.createdAt.toLocaleDateString() %></td>
+            <td><%= a.activity %></td>
+            <td><%= a.description %></td>
+            <td>
+              <% if (user && user._id.equals(a.user)) { %>
+                <form action="/activities/<%= a._id %>?_method=DELETE" method="POST">
+                  <button type="submit">X</button>
+                </form>
+              <% } %>
+            </td>
+          </tr>
+        <% }); %>
+        <tr>
+          <td colspan="3"></td>
+          <td><strong><%= (total / session.activities.length).toFixed(1) %></strong></td>
+        </tr>
+      </tbody>
+    </table>
+    
+  <% } else { %>
+    <h5>No Activities Yet</h5>
+  <% } %>
 
 
 <%- include('../partials/footer') %>

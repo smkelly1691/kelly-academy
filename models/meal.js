@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const mealSchema = new Schema( {
+    name: {
+        type: String, 
+    },
     category: {
         type: String, 
         required: true, 
@@ -11,10 +14,6 @@ const mealSchema = new Schema( {
         type: String, 
         required: true
     }, 
-    user: {
-        type: Schema.Types.ObjectId, 
-        ref: 'User', 
-        required: true },
   });
 
 

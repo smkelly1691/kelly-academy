@@ -9,11 +9,11 @@
       </tr>
     </thead>
     <tbody>
-      <% sessions.forEach(function(s) { %>
+      <% sessions.forEach(function(sesh) { %>
         <tr>
-          <td><%= s.date %></td>
-          <td><%= s.location %></td>
-          <td><a href="/movies/<%= s._id %>">DETAILS</a></td>
+          <td><%= sesh.date %></td>
+          <td><%= sesh.location %></td>
+          <td><a href="/sessions/<%= sesh._id %>">DETAILS</a></td>
         </tr>
         <% }); %>
       </tbody>

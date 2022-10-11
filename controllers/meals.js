@@ -10,6 +10,7 @@ module.exports = {
 function create(req, res) {
   Meal.create(req.body, function (err, meal) {
     res.redirect('/meals/new');
+    console.log(err)
   });
 }
 
@@ -18,6 +19,7 @@ function newMeal(req, res) {
   //Sort meal entries by their category
   .sort('category')
   .exec(function (err, meals) {
+    console.log(err)
     res.render('meals/new', {
       title: 'Add Meal',
       meals
@@ -29,6 +31,7 @@ function addToFood(req, res) {
   Session.findById(req.params.id, function(err, session) {
     session.food.push(req.body.mealId)
     session.save(function(err) {
+      console.log(err)
       res.redirect(`/sessions/${session._id}`)
     })
   })

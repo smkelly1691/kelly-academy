@@ -1,5 +1,28 @@
 <%- include('../partials/header') %>
 
+<div>Prior to adding a new Food Item, Please ensure the item is not in the table below:</div>
+
+<section id="badge-container">
+  <% meals.forEach(function(m) { %>
+    <article class="badge"><%= m.name %></article>
+  <% }) %>
+</section>
+
+<form id="add-meal-form" action="/meals" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Category:</label>
+    <select name="category">
+        <option value="AM Snack">AM Snack</option>
+        <option value="Breakfast">Breakfast</option>
+        <option value="Lunch">Lunch</option>
+        <option value="PM Snack">PM Snack</option>
+        <option value="Dinner">Dinner</option>
+    </select>
+    <label>Descripton:</label>
+    <input type="text" name="description">
+    <input type="submit" value="Add Meal">
+</form>
 
 
 <%- include('../partials/footer') %>

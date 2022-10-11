@@ -10,7 +10,7 @@ const activitySchema= new Schema ( {
         type: String, 
         required: true
     },
-    user: {
+    userId: {
         type: Schema.Types.ObjectId, 
         ref: 'User', 
         required: true },
@@ -20,11 +20,6 @@ const activitySchema= new Schema ( {
   });
 
   const sessionSchema = new Schema( {
-    user: {
-        type: Schema.Types.ObjectId, 
-        ref: 'User', 
-        required: true 
-    },
     date: {
         type: Date, 
         required: true,

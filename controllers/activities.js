@@ -2,12 +2,12 @@ const Session = require('../models/session')
 
 module.exports = {
     create,
-    delete: deleteSession
+    delete: deleteActivity
 }
 
 function create(req, res) {
     Session.findById(req.params.id, function(err, session) {
-        req.body.user = req.user._id
+        req.body.userId = req.user._id
         req.body.userName = req.user.name
         req.body.userAvatar = req.user.avatar
         session.activities.push(req.body)
@@ -17,7 +17,7 @@ function create(req, res) {
     })
 }
 
-function deleteSession(req, res, next) {
+function deleteActivity(req, res, next) {
     // Note the cool "dot" syntax to query on the property of a subdoc
     Session.findOne({'activities._id': req.params.id, 'activities.user': req.user._id}).then(function(session) {
       // Rogue user!
