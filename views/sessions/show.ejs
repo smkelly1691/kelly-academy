@@ -11,12 +11,14 @@
     </ul>    
   </section>
   <!-- form to add meals below -->
+  <% if(user) { %>
   <form id="add-meal-to-food" action="/sessions/<%= session._id %>/meals" method="POST">
     <select name="mealId">
       <%- meals.map(m => `<option value="${m._id}">${m.name}</option>`) .join('') %>
     </select>
     <button type="submit">Add to Food</button>
   </form>
+  <% } %>
   
   
   <br><br>
