@@ -9,7 +9,9 @@ body {
 	line-height: 1.6;
 	margin: 0;
 	height: 100vh;
-  background-color: rgb(194, 216, 129);
+  background-color: rgb(177, 205, 83);
+  background-image: url("https://wallpaperaccess.com/full/1974181.jpg");
+  background-repeat: no-repeat;
 }
 
 main {
@@ -42,10 +44,6 @@ a {
 	color: #34495e;
   font-weight: bold;
   text-align: center;
-}
-
-a {
-	text-decoration: none;
 }
 
 .logo {
@@ -90,6 +88,7 @@ form {
 input, select {
   padding: 10px;
   margin: 10px;
+  width: 75%;
 }
 
 .main-nav a {
@@ -133,6 +132,22 @@ input, select {
 
 }
 
+#food-container {
+  display: flex; 
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 800px;
+
+}
+
+.food {
+  padding: 5px; 
+  margin: 5px;
+  border:rgb(0, 0, 0) solid 2px;
+  background-color: rgb(248, 250, 252);
+}
+
 a {
   background-image: linear-gradient(
     to right,
@@ -148,6 +163,10 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
+}
+
+.main-home {
+  background-color: rgb(216, 229, 241);
 }
 
 a:before {
@@ -193,5 +212,6 @@ footer {
   background-color: rgb(180, 216, 221);
   color: rgb(0, 0, 0);
   text-align: center;
-  padding: 20px;
+  padding: 10px;
+  border-top:rgb(0, 0, 0) solid 1px;
 }

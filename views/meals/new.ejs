@@ -1,10 +1,12 @@
 <%- include('../partials/header') %>
 
-<div>Prior to adding a new Food Item, Please ensure the item is not in the table below:</div>
+<h2>Add A New Food Item</h2>
 
-<section id="badge-container">
+<div>Prior to adding a new Food Item, Please ensure the item is not listed below:</div>
+<br>
+<section id="food-container">
   <% meals.forEach(function(m) { %>
-    <article class="badge"><%= m.name %></article>
+    <article class="food"><%= m.name %></article>
   <% }) %>
 </section>
 
