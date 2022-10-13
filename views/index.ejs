@@ -2,14 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poiret+One&family=Roboto:wght@100&family=Romanesco&display=swap" rel="stylesheet">
   <title>HOME</title>
 </head>
-<nav>
-  <a href="/sessions/" <%- title === 'All Sessions' ? 'class="active"' : '' %>>ALL SESSIONS</a>
-</nav>
+<header class="header">
+  <div class="logo-container">
+    <h1 class="logo"><a href="../">THE KELLY ACADEMY</a></h1>
+    <h3 class="sublogo">Live, Laugh, Love</h3>
+  </div>
+    <ul class="main-nav">
+      <li><a href="/sessions" <%- title === 'All Sessions' ? 'class="active"' : '' %>>ALL SESSIONS</a></li>
+      <li><a href="/auth/google" class="login">LOG IN&nbsp;</a></li>
+    </ul>
+</header> 
+
 <body>
-  HOME
+  <h1>WELCOME TO <br> THE KELLY ACADEMY</h1>
+<main>
+  <a href = "/sessions/"> 
+    <img src = "https://images.unsplash.com/photo-1517554558809-9b4971b38f39?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGFyZW50JTIwYW5kJTIwY2hpbGR8ZW58MHx8MHx8&w=1000&q=80" 
+      alt = "Parents"/>
+    <h4>PARENTS</h4>
+  </a>
+  <a href = "/auth/google"> 
+    <img src = "https://earlyedgecalifornia.org/wp-content/uploads/2019/02/iStock-516133194.jpg" 
+      alt = "Teacher"/>
+    <h4>TEACHERS</h4>
+  </a>
+</main>
 </body>
-</html>
