@@ -7,7 +7,7 @@ module.exports = {
 
 function create(req, res) {
     Session.findById(req.params.id, function(err, session) {
-        req.body.userId = req.user._id
+        req.body.user = req.user._id
         req.body.userName = req.user.name
         req.body.userAvatar = req.user.avatar
         session.activities.push(req.body)

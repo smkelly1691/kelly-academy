@@ -46,9 +46,7 @@
         </tr>
       </thead>
       <tbody>
-        <!-- <% let total = 0 %> -->
         <% session.activities.forEach(function(a) { %>
-          <!-- <% total += a.activity %> -->
           <tr>
             <td class="activity-user"><img alt="avatar" src="<%= a.userAvatar %>" referrerpolicy="no-referrer" ><%= a.userName %></td>
             <td><%= a.createdAt.toLocaleDateString() %></td>
@@ -63,10 +61,6 @@
             </td>
           </tr>
         <% }); %>
-        <!-- <tr>
-          <td colspan="3"></td>
-          <td><strong><%= (total / session.activities.length).toFixed(1) %></strong></td>
-        </tr> -->
       </tbody>
     </table>
     
