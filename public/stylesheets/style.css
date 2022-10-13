@@ -1,105 +1,102 @@
 
 * {
-  box-sizing: border-box;
-  font-family: Helvetica;
-  color: #424748;
+	box-sizing: border-box;
 }
-
 body {
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+  background-color: rgb(167, 200, 70);
+}
+ul {
   margin: 0;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas: 
-    "nav"
-    "main"
+  padding: 0;
+  list-style: none;
 }
 
-body > nav {
-  grid-area: nav;
-  background-color: #B8C0C2;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 20px 0 30px;
-}
 
-nav > img {
-  width: 34px;
-  object-fit: contain;
-  margin-right: auto;
-}
-
-body > main {
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #E8ECEB;
-  padding: 20px;
-  overflow-y: scroll;
-}
-nav > a {
-  margin: 20px;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 5px;
-}
-
-nav > a:hover:not(.active) {
-  color: white;
-  background-color: #424748;
-}
-
-nav > a.active {
-  color: white;
-  cursor: default;
-}
-
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 34px;
-}
-
-.login img {
-  height: 30px;
-}
-
-#list {
-  border-collapse: collapse;
-  margin: 25px 0;
-  font-size: 0.9em;
-  font-family: sans-serif;
-  min-width: 400px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-#list thead tr {
-  background-color: #e06716a0;
-  color: #ffffff;
-  text-align: left;
-}
-
-#list th,
-#list td {
-    padding: 12px 15px;
-}
-
-#list tbody tr {
-  border-bottom: 1px solid #dddddd;
-}
-
-#list tbody tr:nth-of-type(even) {
-  background-color: #f3f3f3;
-}
-
-#list tbody tr:last-of-type {
-  border-bottom: 2px solid #d85700a0;
-}
-
-#list tbody tr.active-row {
+h2,
+h3,
+a {
+	color: #34495e;
   font-weight: bold;
-  color: #009879;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo {
+	margin: 0;
+  margin-top: 150px;
+	font-size: 2em;
+  font-family: 'Architects Daughter', cursive;
+  font-weight: bold;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+  margin-top: 40px;;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	/* background-color: #f4f4f4; */
+  background-image: url("https://st2.depositphotos.com/1967477/7687/v/950/depositphotos_76879471-stock-illustration-cartoon-happy-kids-on-a.jpg");
+	background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  height: 310px;
+  -webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	}
+	.header {
+		flex-direction: column;
+		align-items: center;
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
 }
