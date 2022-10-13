@@ -64,6 +64,12 @@ a {
   justify-content: center;
 }
 
+.main-nav a {
+	color: #34495e;
+	font-size: 1.1em;
+  font-family: 'Architects Daughter', cursive;
+}
+
 .logo a,
 .main-nav a {
 	padding: 10px 15px;
@@ -91,12 +97,6 @@ input, select {
   width: 75%;
 }
 
-.main-nav a {
-	color: #34495e;
-	font-size: 1.1em;
-  font-family: 'Architects Daughter', cursive;
-}
-
 .main-nav a:hover {
 	color: #718daa;
 }
@@ -107,6 +107,7 @@ input, select {
   justify-content: space-evenly;
   align-items: center;
   margin: 30px;
+  background-color: rgb(216, 229, 241, 70%);
 }
 
 .header {
@@ -126,10 +127,6 @@ input, select {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 15px;
-}
-
-#show-page {
-
 }
 
 #food-container {
@@ -163,10 +160,6 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
-}
-
-.main-home {
-  background-color: rgb(216, 229, 241);
 }
 
 a:before {
