@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 <div class="show-page-container">
   <h2>Class Session Details</h2>
-<section id="show-page">
+  <section id="show-page">
     <div class="date"><strong>Date: </strong></div>
     <div class="date"><%= session.date.toLocaleDateString() %></div>
     <div class="location"><strong>Location: </strong></div>
@@ -24,24 +24,22 @@
           <td><%= f.category %></td>
           <td><%= f.description %></td>
         </tr>
-        <% }); %>
-      </tbody>
-    </table>
-
-
+      <% }); %>
+    </tbody>
+  </table>
 
   <!-- form to add meals below -->
   <% if(user) { %>
-  <form id="add-meal-to-food" action="/sessions/<%= session._id %>/meals" method="POST">
-    <select name="mealId">
-      <%- meals.map(m => `<option value="${m._id}">${m.name}</option>`) .join('') %>
-    </select>
-    <button type="submit">Add to Food</button>
-  </form>
+    <form id="add-meal-to-food" action="/sessions/<%= session._id %>/meals" method="POST">
+      <select name="mealId">
+        <%- meals.map(m => `<option value="${m._id}">${m.name}</option>`) .join('') %>
+      </select>
+      <button type="submit">Add to Food</button>
+    </form>
   <% } %>
   
-  
   <br><br>
+
   <h2>Activities</h2>
   
   <% if(user) { %>
@@ -59,7 +57,6 @@
       <thead>
         <tr>
           <th>Teacher</th>
-          <th>Date</th>
           <th>Activity</th>
           <th>Description</th>
           <th></th>
@@ -69,7 +66,6 @@
         <% session.activities.forEach(function(a) { %>
           <tr>
             <td class="activity-user"><img alt="avatar" src="<%= a.userAvatar %>" referrerpolicy="no-referrer" ><%= a.userName %></td>
-            <td><%= a.createdAt.toLocaleDateString() %></td>
             <td><%= a.title %></td>
             <td><%= a.description %></td>
             <td>

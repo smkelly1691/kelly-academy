@@ -41,9 +41,8 @@ function create(req, res) {
   const session = new Session(req.body);
   session.save(function(err) {
     if (err) {
-      console.log(err)
       return res.redirect('/sessions/new');
     }
-    res.redirect('/sessions');
+    res.redirect(`/sessions/${session._id}`);
   });
 }

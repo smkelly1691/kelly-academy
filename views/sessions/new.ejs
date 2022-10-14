@@ -3,16 +3,15 @@
 <h2>Add a new Class Session</h2>
 
 <form id="new-form" action="/sessions" method="POST">
-    <label>Date:</label>
-    <input type="date" name="date" 
-        placeholder="dd-mm-yyyy">
-    <label>Location:</label>
-    <select name="location">
-      <option value="Main Campus">Main Campus</option>
-      <option value="Other">Other</option>
-    </select>
-    <input type="submit" value="Add Session">
-  </form>
+  <label>Date:</label>
+    <input type="date" name="date" placeholder="dd-mm-yyyy">
+  <label>Location:</label>
+  <select name="location">
+    <option value="Main Campus">Main Campus</option>
+    <option value="Other">Other</option>
+  </select>
+  <input type="submit" value="Add Session">
+</form>
 
 
 <%- include('../partials/footer') %>
