@@ -7,7 +7,7 @@
 body {
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.6;
-	margin: 0;
+	margin: 0px;
 	height: 100vh;
   background-color: rgb(177, 205, 83);
   background-image: url("https://wallpaperaccess.com/full/1974181.jpg");
@@ -18,7 +18,7 @@ main {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -91,6 +91,10 @@ form {
   border: #311b0b, 2px, solid;
 }
 
+#new-form {
+  margin-bottom: 200px;
+}
+
 input, select {
   padding: 10px;
   margin: 10px;
@@ -107,6 +111,7 @@ input, select {
   justify-content: space-evenly;
   align-items: center;
   margin: 30px;
+  margin-bottom: 80px;
   background-color: rgb(216, 229, 241, 70%);
 }
 
@@ -197,14 +202,76 @@ img:hover {
   transition: all 1s ease;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.footer-container {
   background-color: rgb(180, 216, 221);
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 10px;
+  padding: 10px; 
+  /* text-align: center; */
   border-top:rgb(0, 0, 0) solid 1px;
+  height: 65px; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
 }
+
+#list {
+  border:rgb(0, 0, 0) solid 2px;
+  margin-bottom: 200px;
+}
+
+#list td, th {
+  border: #000 solid 2px;
+  padding: 5px;
+}
+
+.show-page-container {
+  background-color: rgb(241, 248, 254, 90%);
+  padding: 20px;
+  width: 700px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  text-transform: uppercase;
+  width: auto;
+}
+
+#food {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+#add-activity-form {
+  margin: 0;
+  padding: 0
+}
+
+button {
+  padding: 5px; 
+}
+
+#food-served-table td, th {
+  border:rgb(0, 0, 0) 2px solid;
+  padding: 5px;
+  text-align: center;
+}
+
+table#activities-table {
+  width: 600px;
+  border: none;
+}
+
+#activities-table td, th {
+  border: none;
+  padding: 10px;
+}
+
+#delete {
+  width: 50px; 
+  padding: 0;
+}
+

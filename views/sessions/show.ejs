@@ -1,15 +1,35 @@
 <%- include('../partials/header') %>
-
+<div class="show-page-container">
+  <h2>Class Session Details</h2>
 <section id="show-page">
-    <div>Date: </div>
-    <div><%= session.date.toLocaleDateString() %></div>
-    <div>Location: </div>
-    <div><%= session.location %></div>
-    <div>Food: </div>
-    <ul>
-      <%- session.food.map(m => `<li>${m.name} <small>${m.category}</small><small>${m.description}</small></li>`).join('') %>
-    </ul>    
+    <div class="date"><strong>Date: </strong></div>
+    <div class="date"><%= session.date.toLocaleDateString() %></div>
+    <div class="location"><strong>Location: </strong></div>
+    <div class="location"><%= session.location %></div>
+    <div id="food">Food Served: </div>
   </section>
+
+  <table id="food-served-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% session.food.forEach(function(f) { %>
+        <tr>
+          <td><%= f.name %></td>
+          <td><%= f.category %></td>
+          <td><%= f.description %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+
+
+
   <!-- form to add meals below -->
   <% if(user) { %>
   <form id="add-meal-to-food" action="/sessions/<%= session._id %>/meals" method="POST">
@@ -35,7 +55,7 @@
   <% } %>
   
   <% if (session.activities.length) { %>
-    <table>
+    <table id="activities-table">
       <thead>
         <tr>
           <th>Teacher</th>
@@ -54,7 +74,7 @@
             <td><%= a.description %></td>
             <td>
               <% if (user && user._id.equals(a.user)) { %>
-                <form action="/activities/<%= a._id %>?_method=DELETE" method="POST">
+                <form id="delete" action="/activities/<%= a._id %>?_method=DELETE" method="POST">
                   <button type="submit">Delete Activity</button>
                 </form>
               <% } %>
@@ -67,6 +87,6 @@
   <% } else { %>
     <h5>No Activities Yet</h5>
   <% } %>
-
+</div>
 
 <%- include('../partials/footer') %>
