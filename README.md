@@ -27,4 +27,5 @@ able to access a site/app with recent data about what your child is doing can ai
     <li>Implement an option for parents to log in and have access to create comments</li>
     <li>Implement the ability of users to post images of class activities</li>
     <li>Allow parents to log in to view data specific to their child</li>
+    <li>Implement more CRUD throughout the application giving users the ability to update and delete the Meal and Session data entities that they have created</li>
   </ul>
