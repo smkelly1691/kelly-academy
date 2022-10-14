@@ -2,13 +2,15 @@
 <div class="show-page-container">
   <h2>Class Session Details</h2>
   <section id="show-page">
-    <div class="date"><strong>Date: </strong></div>
-    <div class="date"><%= session.date.toLocaleDateString() %></div>
-    <div class="location"><strong>Location: </strong></div>
-    <div class="location"><%= session.location %></div>
-    <div id="food">Food Served: </div>
+    <div class="date"><strong>Date: </strong>
+      <%= session.date.toLocaleDateString() %>
+    </div>
+    <div class="location"><strong>Location: </strong>
+      <%= session.location %>
+    </div>
   </section>
 
+  <h3>Food Served:</h3>
   <table id="food-served-table">
     <thead>
       <tr>

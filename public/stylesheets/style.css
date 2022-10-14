@@ -64,7 +64,7 @@ a {
 
 .main-nav a {
 	color: #34495e;
-	font-size: 1.1em;
+	font-size: 1.3em;
   font-family: 'Architects Daughter', cursive;
 }
 
@@ -83,20 +83,26 @@ form {
   align-items: center;
   padding: 10px;
   margin: 30px;
-  width: 300px;
+  width: 400px;
   align-items: center;
-  background-color: aliceblue;
+  /* background-color: aliceblue; */
   border: #311b0b, 2px, solid;
 }
 
 #new-form {
   margin-bottom: 200px;
+  background-color: rgb(231, 204, 204, 85%);
+}
+
+textarea {
+  width: 300px;
 }
 
 input, select {
   padding: 10px;
   margin: 10px;
   width: 75%;
+  text-align: center;
 }
 
 .main-nav a:hover {
@@ -216,11 +222,24 @@ img:hover {
 #list {
   border:rgb(0, 0, 0) solid 2px;
   margin-bottom: 200px;
+  background-color: rgb(231, 204, 204, 85%);
+  padding: 10px;
+}
+
+#list th {
+  background-color:rgb(180, 216, 221);
+  border:rgb(0, 0, 0) solid 2px;
+  padding: 15px; 
+}
+
+#list a {
+  font-size: 10px;
+  font-style: italic;
 }
 
 #list td, th {
   border: #000 solid 2px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .show-page-container {
@@ -233,14 +252,34 @@ img:hover {
   align-items: center;
 }
 
+.show-page-container h3 {
+  margin-bottom: 0;
+}
+
+#show-page {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+#show-page div {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
 .date {
   text-transform: uppercase;
   width: auto;
 }
 
-#food {
-  margin-top: 20px;
-  margin-bottom: 0;
+#add-meal-to-food {
+  background-color: none;
+}
+
+#add-meal-form {
+  background-color: rgb(231, 204, 204, 85%);
 }
 
 #add-activity-form {
@@ -272,4 +311,3 @@ table#activities-table {
   width: 50px; 
   padding: 0;
 }
-
