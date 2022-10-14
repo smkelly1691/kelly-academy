@@ -1,8 +1,8 @@
 <h1>The Kelly Academy</h1>
-<h2>The Kelly Academy is an activity tracking application where parents of children enrolled in the school program can review 
-data regarding their child's activity while at school such as specific learning activities while in class and meals served</h2>
-<h2>Sometimes it can be difficult to leave your child, especially those of younger ages, for extended periods of time and being
-able to access a site/app with recent data about what your child is doing can aid in relieving some of this difficulty</h2>
+<h3>The Kelly Academy is an activity tracking application where parents of children enrolled in the school program can review 
+data regarding their child's activity while at school such as specific learning activities while in class and meals served</h3>
+<h3>Sometimes it can be difficult to leave your child, especially those of younger ages, for extended periods of time and being
+able to access a site/app with recent data about what your child is doing can aid in relieving some of this difficulty</h3>
 
 <h3>Application Images</h3>
   <p><a href="https://imgur.com/CvzwSbk"><img src="https://i.imgur.com/CvzwSbk.png" title="source: imgur.com" /></a></p>
